@@ -1,5 +1,7 @@
 #!/bin/bash
 
+token=vinz
+
 # Color definitions
 BLUE='\033[0;34m'       
 RED='\033[0;31m'
@@ -74,7 +76,7 @@ check_token() {
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" != "$foxx" ]; then
+  if [ "$USER_TOKEN" != "$vinz" ]; then
     echo -e "${RED}TOKEN SALAH, KELUAR DARI SCRIPT.${NC}"
     exit 1
   else
