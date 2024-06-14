@@ -76,7 +76,7 @@ check_token() {
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" != "$vinz" ]; then
+  if [ "$USER_TOKEN" != "$token" ]; then
     echo -e "${RED}TOKEN SALAH, KELUAR DARI SCRIPT.${NC}"
     exit 1
   else
