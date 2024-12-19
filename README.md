@@ -7,7 +7,7 @@
 Gunakan script di bawah untuk menginstall thema dengan sekali copy paste saja.
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/VinzxyO/theme-auto-installer/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/Dafatrizaaa/theme-auto-installer/main/install.sh)
 ```
 
 ## Features
