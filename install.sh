@@ -99,8 +99,8 @@ install_theme() {
     esac
   done
   
-if [ -e /root/pterodactyl ]; then
-    sudo rm -rf /root/pterodactyl
+if [ -e /etc/pterodactyl ]; then
+    sudo rm -rf /etc/pterodactyl
   fi
   wget -q "$THEME_URL"
   sudo unzip -o "$(basename "$THEME_URL")"
@@ -111,7 +111,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                                   "
-  sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  sudo cp -rfT /etc/pterodactyl /var/www/pterodactyl
   curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   sudo apt install -y nodejs
   sudo npm i -g yarn
@@ -120,8 +120,8 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   php artisan migrate
   yarn build:production
   php artisan view:clear
-  sudo rm /root/C2.zip
-  sudo rm -rf /root/pterodactyl
+  sudo rm /etc/C2.zip
+  sudo rm -rf /etc/pterodactyl
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
@@ -138,7 +138,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  sudo cp -rfT /etc/pterodactyl /var/www/pterodactyl
   curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   sudo apt install -y nodejs
   npm i -g yarn
@@ -148,8 +148,8 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   php artisan migrate
   yarn build:production
   php artisan view:clear
-  sudo rm /root/C1.zip
-  sudo rm -rf /root/pterodactyl
+  sudo rm /etc/C1.zip
+  sudo rm -rf /etc/pterodactyl
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
@@ -176,12 +176,12 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
     read LINK_CHNL
 
     # Mengganti placeholder dengan nilai dari pengguna
-    sudo sed -i "s|LINK_WA|$LINK_WA|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
-    sudo sed -i "s|LINK_GROUP|$LINK_GROUP|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
-    sudo sed -i "s|LINK_CHNL|$LINK_CHNL|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
+    sudo sed -i "s|LINK_WA|$LINK_WA|g" /etc/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
+    sudo sed -i "s|LINK_GROUP|$LINK_GROUP|g" /etc/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
+    sudo sed -i "s|LINK_CHNL|$LINK_CHNL|g" /etc/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
     
 
-  sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  sudo cp -rfT /etc/pterodactyl /var/www/pterodactyl
   curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   sudo apt install -y nodejs
   sudo npm i -g yarn
@@ -190,8 +190,8 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   php artisan migrate
   yarn build:production
   php artisan view:clear
-  sudo rm /root/C3.zip
-  sudo rm -rf /root/pterodactyl
+  sudo rm /etc/C3.zip
+  sudo rm -rf /etc/pterodactyl
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
